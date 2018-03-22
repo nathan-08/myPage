@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import images from "../../images";
+import images from "./images";
+import fontFamilies from "./fontFamilies.js";
 
 export default class UserPage extends Component {
   constructor() {
@@ -10,18 +11,7 @@ export default class UserPage extends Component {
       imgurl: "https://s3.amazonaws.com/siegrs/avatars/avatar_5a7faa0e9de59.png",
       title: "Awesome Page",
       editorOpen: false,
-      fontFamilies: [
-        "Georgia, serif",
-        '"Palatino Linotype", "Book Antiqua", Palatino, serif',
-        '"Times New Roman", Times, serif',
-        "Arial, Helvetica, sans-serif",
-        '"Arial Black", Gadget, sans-serif',
-        '"Comic Sans MS", cursive, sans-serif',
-        "Impact, Charcoal, sans-serif",
-        '"Lucida Sans Unicode", "Lucida Grande", sans-serif',
-        '"Courier New", Courier, monospace',
-        '"Lucida Console", Monaco, monospace'
-      ],
+      fontFamilies: fontFamilies,
       fontIndex: 0,
       fontColor: "pink",
       message: "welcome to my page",
@@ -131,10 +121,6 @@ export default class UserPage extends Component {
                     Lucida Console
                   </option>
                 </select>
-              </span>
-              <span>
-                <button>Okay</button>
-                <button>Cancel</button>
               </span>
             </div>
           )}

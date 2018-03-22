@@ -28,6 +28,10 @@ span {
 .mid-container {
   display: flex;
   justify-content: center;
+  flex: 1;
+}
+.mid-container > p {
+  width: 40vw;
 }
 .App {
   text-align: center;
@@ -35,13 +39,13 @@ span {
 }
 .login {
   margin-top: 2em;
-  padding: 0 2em;
+  padding: 0 25%;
   display: flex;
   flex-direction: column;
 }
 .signup {
   margin-top: 2em;
-  padding: 0 2em;
+  padding: 0 25%;
   display: flex;
   flex-direction: column;
 }
@@ -56,4 +60,9 @@ span {
 .title {
   display: flex;
   justify-content: center;
+}
+.form > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

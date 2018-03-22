@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import images from "../../images";
+import images from "../UserPage/images";
 
 class Home extends Component {
   constructor() {
@@ -25,6 +25,17 @@ class Home extends Component {
           <h1>Awesome Page</h1>
         </div>
         <p>Sign up to join the experience</p>
+        <div className="signup">
+          <p>New to MyPage? Create Account</p>
+          <input
+            type="text"
+            value={this.state.newName}
+            placeholder="username"
+            onClick={e => this.setState({ newName: e.target.value })}
+          />
+          <input type="password" placeholder="password" />
+          <button>Sign Up</button>
+        </div>
         <div className="login">
           <p>Already a member?</p>
           <input
@@ -40,17 +51,6 @@ class Home extends Component {
             onChange={e => this.setState({ pwInput: e.target.value })}
           />
           <button onClick={() => this.login()}>Login</button>
-        </div>
-        <div className="signup">
-          <p>New to MyPage? Create Account</p>
-          <input
-            type="text"
-            value={this.state.newName}
-            placeholder="username"
-            onClick={e => this.setState({ newName: e.target.value })}
-          />
-          <input type="password" placeholder="password" />
-          <button>Sign Up</button>
         </div>
       </div>
     );
