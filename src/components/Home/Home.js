@@ -1,20 +1,33 @@
 import React, { Component } from "react";
 import images from "../UserPage/images";
+import axios from "axios";
 
 class Home extends Component {
   constructor() {
     super();
     this.state = {
       nameInput: "",
-      pwInput: ""
+      pwInput: "",
+      newName: "",
+      newPw: ""
     };
   }
   login() {
     console.log("loggin in...");
-    this.props.history.push("/userpage");
+    const user = { username: this.state.nameInput, password: this.state.pwInput };
+    axios.post("/login", user).then(resp => {
+      if (resp.data.loggedIn) {
+        this.props.history.push("/userpage");
+      }
+    });
   }
+
   signup() {
     console.log("signing in...");
+    const user = { username: this.state.newName, password: this.state.newPw };
+    axios.post("/signup", user).then(resp => {
+      this.props.history.push("/userpage");
+    });
   }
 
   render() {
@@ -26,18 +39,18 @@ class Home extends Component {
         </div>
         <p>Sign up to join the experience</p>
         <div className="signup">
-          <p>New to MyPage? Create Account</p>
+          <h3>New to Awesome Page? Create Account</h3>
           <input
             type="text"
             value={this.state.newName}
             placeholder="username"
-            onClick={e => this.setState({ newName: e.target.value })}
+            onChange={e => this.setState({ newName: e.target.value })}
           />
-          <input type="password" placeholder="password" />
-          <button>Sign Up</button>
+          <input type="password" placeholder="password" onChange={e => this.setState({ newPw: e.target.value })} />
+          <button onClick={() => this.signup()}>Sign Up</button>
         </div>
         <div className="login">
-          <p>Already a member?</p>
+          <h3>Already a member?</h3>
           <input
             type="text"
             value={this.state.nameInput}
