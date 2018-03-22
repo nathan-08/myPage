@@ -37,7 +37,7 @@ class Home extends Component {
           <img src={images.bird} height="50" width="50" />
           <h1>Awesome Page</h1>
         </div>
-        <p>Sign up to join the experience</p>
+        <p>Sign up to experience the experience</p>
         <div className="signup">
           <h3>New to Awesome Page? Create Account</h3>
           <input
