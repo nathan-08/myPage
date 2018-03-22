@@ -67,3 +67,7 @@
 * This file will export a function that takes req, res, and next parameters.
 * If there is not session.user object, create one with username (an empty string), loggedIn (false), preferences (an object with bcg, fontColor, favoriteThing, title, message, fontIndex)
 * at the end of the function, call next.
+
+### EXTRA TODO
+
+* Add error messages on Home component
