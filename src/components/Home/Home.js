@@ -14,20 +14,12 @@ class Home extends Component {
   }
   login() {
     console.log("loggin in...");
-    const user = { username: this.state.nameInput, password: this.state.pwInput };
-    axios.post("/login", user).then(resp => {
-      if (resp.data.loggedIn) {
-        this.props.history.push("/userpage");
-      }
-    });
+    this.props.history.push("/userpage");
   }
 
   signup() {
     console.log("signing in...");
-    const user = { username: this.state.newName, password: this.state.newPw };
-    axios.post("/signup", user).then(resp => {
-      this.props.history.push("/userpage");
-    });
+    this.props.history.push("/userpage");
   }
 
   render() {

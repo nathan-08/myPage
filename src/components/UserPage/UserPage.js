@@ -9,7 +9,7 @@ export default class UserPage extends Component {
     this.state = {
       input: "",
       editorOpen: false,
-      loggedIn: false,
+      loggedIn: true,
       fontFamilies: fontFamilies,
       preferences: {
         bgc: "cornflowerBlue",
