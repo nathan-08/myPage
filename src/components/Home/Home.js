@@ -14,11 +14,13 @@ class Home extends Component {
   }
   login() {
     console.log("loggin in...");
+    // post to /login endpoint username and password
     this.props.history.push("/userpage");
   }
 
   signup() {
     console.log("signing in...");
+    // post to /signup endpoint username and password
     this.props.history.push("/userpage");
   }
 
