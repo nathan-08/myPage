@@ -1,4 +1,4 @@
-# Using express-session to handle multiple users
+# Using express-session, full CRUD server, authorization middleware to handle multiple users on your Node server
 
 ## Clone the repo
 
