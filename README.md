@@ -1,6 +1,6 @@
 # Using express-session to handle multiple users
 
-## Check out the no-server Branch
+## Clone the repo
 
 * CD into the root directory of the project
 * run `npm i`
@@ -12,6 +12,11 @@
 * Connecting our front end to our server
 * Using express-session to store user data and keep track of logged in users
 * Create a full CRUD server with endpoints to log in and log out users, create new users, update user data.
+
+### HOME
+
+* Edit the login function to axios post to the login endpoint with username and password
+* Edit the signup endpoint to post to the signup endpoint with username and password
 
 ### USERPAGE
 
