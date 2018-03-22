@@ -52,7 +52,6 @@ export default class UserPage extends Component {
         >
           <h1>{this.state.preferences.title}</h1>
 
-          {!this.state.editorOpen && <button onClick={() => this.toggleEditor()}>edit</button>}
           <div className="mid-container">
             <p>{this.state.preferences.message}</p>
             <img src={images[this.state.preferences.favoriteThing]} height="200px" width="200px" />
@@ -166,6 +165,9 @@ export default class UserPage extends Component {
               </div>
             )}
           </div>
+          <br />
+
+          {!this.state.editorOpen && <button onClick={() => this.toggleEditor()}>edit</button>}
           <button onClick={() => this.logout()}>logout</button>
         </div>
       </div>
